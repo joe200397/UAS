@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title> Kerucut </title>
+        <h2>Luas Kerucut</h2>
+        <script language="JavaScript">
+            function ck(){
+                if(form.la.value == "" || form.ls.value == ""){
+                    alert("Silahkan Input Nilai");
+                    exit;
+                }
+            }
+            function lk() {
+                ck(); 
+                x=eval(form.la.value);
+                y=eval(form.ls.value); 
+                h= x+y  
+                
+                form.hk.value = h; 
+            }
+            function reset() {
+                form.la.value="";
+                form.ls.value="";
+                form.hk.value = "";
+            }
+        </script>
+    </head>
+    <body>
+                <form name="form">
+                    <hr>
+                        Rumus Luas Kerucut = luas Alas + luas Selimut
+                    <hr>
+                        Input Luas Alas
+                        <input type=text name="la" size=3><br>
+                        <br>
+                        Input Luas Selimut
+                        <input type=text name="ls" size=3><br>
+                        <br>
+                        Hasil <input type="text" value="" name="hk" size="9">
+                        <br><br>
+                    <hr>
+                        <input type=button name=submit onclick="lk()" value="Hitung">
+                        <input type=button name=submit onclick="reset()" value="Reset">
+                       
+                    <hr>
+                </form>
+        </body>
+</html>

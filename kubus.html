@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title> Kubus </title>
+        <h2>Luas Kubus</h2>
+        <script language="JavaScript">
+            function lk(){
+                if(form.skb.value == ""){
+                    alert("Silahkan Input Nilai");
+                    exit;
+                }
+            }
+            function lkb() {
+                lk();
+                x=eval(form.skb.value);
+                h= 6*x*x
+                
+                form.hkb.value = h;
+            }
+            function reset() {
+                form.skb.value="";
+                form.hkb.value = "";
+            }
+        </script>
+    </head>
+    <body>
+        <form name="form">
+                <hr>
+                    Rumus Luas Kubus =  6 * sisi * sisi
+                <hr>
+                    Input Sisi
+                    <input type=text name="skb" size=3><br>
+                    <br>
+                    Hasil <input type="text" value="" name="hkb" size="9">
+                    <br><br>
+                <hr>
+                    <input type=button name=submit onclick="lkb()" value="Hitung">
+                    <input type=button name=submit onclick="reset()" value="Reset">
+                <hr>
+            </form>
+    </body>
+</html>

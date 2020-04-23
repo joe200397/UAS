@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title> Jajar Genjang </title>
+        <h2>Keliling Jajar Genjang</h2>
+        <script language="JavaScript">
+            function jg(){
+                if(form.ajg.value == "" || form.smjg.value == ""){
+                    alert("Silahkan Input Nilai");
+                    exit;
+                }
+            }
+            function kjg() {
+                jg();
+                x=eval(form.ajg.value);
+                y=eval(form.smjg.value);
+                h= 2*(x+y)
+                
+                form.hjg.value = h;
+            }
+            function reset() {
+                form.ajg.value="";
+                form.smjg.value="";
+                form.hjg.value = "";
+            }
+        </script>
+    </head>
+    <body>
+        <form name="form">
+                    <hr>
+                        Rumus Keliling Jajar Genjang= 2 * (a + b)
+                    <hr>
+                        Input Alas
+                        <input type=text name="ajg" size=3><br>
+                        <br>
+                        Input Sisi Miring
+                        <input type=text name="smjg" size=3><br>
+                        <br>
+                        Hasil <input type="text" value="" name="hjg" size="9">
+                        <br><br>
+                    <hr>
+                        <input type=button name=submit onclick="kjg()" value="Hitung">
+                        <input type=button name=submit onclick="reset()" value="Reset">
+                        
+                </form>
+        </body>
+</html>

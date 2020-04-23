@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Jajar Genjang</title>
+        <h2>Luas Jajar Genjang</h2>
+    <script language="javascript">
+        function rjg() {
+            if(form.ajg.value == "" || form.tjg.value == ""){
+                alert("tolong input nilai");
+                exit;
+            }
+        }
+        function ljg() {
+            rjg();
+            x=eval(form.ajg.value);
+            y=eval(form.tjg.value);
+            z= x * y
+
+            form.hjg.value = z;
+        }
+        function reset() {
+            form.ajg.value = "";
+            form.tjg.value = "";
+            form.hjg.value = "";
+        }
+    </script>
+    </head>
+        <body>
+
+           <form name="form">
+           <hr>
+               Rumus Luas Jajar Genjang = A * T
+           <hr>
+                input alas :
+                <input type="text" name="ajg" size=3><br>
+                <br>
+                Input tinggi :
+                <input type="text" name="tjg" size="3"><br>
+                <br>
+                Hasil :
+                <input type="text" value="" name="hjg" size="7"><br>
+                <br>
+                <hr>
+                <input type=button name=submit onclick="ljg()" value="hitung ">
+                <input type=button name=submit onclick="reset()" value="reset ">
+                <hr>
+           </form>
+        </body>
+
+    
+</html>
